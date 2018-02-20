@@ -1,0 +1,3 @@
+org\bankmega\codec\IBM285Decoder.class
+com\bankmega\processor\InquiryRequestProcessor.class
+com\bankmega\processor\InquiryResponseProcessor.class

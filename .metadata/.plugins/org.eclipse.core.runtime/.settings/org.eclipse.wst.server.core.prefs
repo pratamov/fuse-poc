@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+runtimes=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<runtimes>\r\n  <runtime PROPERTY_EXEC_ENVIRONMENT\="JavaSE-1.7" id\="Red Hat JBoss Fuse 6.3 Runtime" location\="C\:/Programs/servers/jboss-fuse-6.3.0.redhat-187" name\="Red Hat JBoss Fuse 6.3 Runtime" runtime-type-id\="org.fusesource.ide.fuseesb.runtime.63" timestamp\="0"/>\r\n</runtimes>\r\n

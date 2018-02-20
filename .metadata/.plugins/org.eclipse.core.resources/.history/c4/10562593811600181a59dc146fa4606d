@@ -1,0 +1,33 @@
+package com.bankmega.account;
+
+import java.io.IOException;
+
+import org.apache.log4j.Logger;
+
+import com.bankmega.account.connector.SocketClient;
+import com.bankmega.account.entity.InquiryRequest;
+import com.bankmega.account.entity.InquiryResponse;
+
+public class AccountImpl implements Account {
+	
+	Logger LOGGER = Logger.getLogger(AccountImpl.class);
+	private static final String HOST = "10.11.17.10";
+	private static final int PORT = 8074;
+
+	@Override
+	public InquiryResponse inquiry(InquiryRequest request) {
+		
+		AccountRequest accountRequest = AccountRequest.newInstance(request);
+		AccountResponse accountResponse = null;
+		
+		try {
+			SocketClient client = new SocketClient();
+			client.connect(HOST, PORT);
+			byte[] payload = client.request(accountRequest.getBytes());
+			accountResponse = AccountResponse.newInstance(payload, AccountType.INQUIRY);
+		} catch (IOException e) { }
+		
+		return (InquiryResponse) accountResponse.getResponse();
+	}
+
+}

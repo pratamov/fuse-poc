@@ -1,0 +1,12 @@
+package com.bankmega.account;
+
+import com.bankmega.account.entity.InquiryRequest;
+import com.bankmega.account.entity.InquiryResponse;
+import com.bankmega.account.entity.OverbookingRequest;
+import com.bankmega.account.entity.OverbookingResponse;
+
+public interface Account {
+	
+	public InquiryResponse inquiry(InquiryRequest request);
+	
+}

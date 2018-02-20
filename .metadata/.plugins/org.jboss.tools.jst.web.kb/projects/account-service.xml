@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="C:/Users/gimel/.m2/repository/org/apache/camel/camel-core/2.17.0.redhat-630187/camel-core-2.17.0.redhat-630187.jar"/>
+  <path value="C:/Users/gimel/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.11.redhat-2/jaxb-impl-2.2.11.redhat-2.jar"/>
+  <path value="C:/Users/gimel/.m2/repository/org/apache/camel/camel-core-xml/2.17.0.redhat-630187/camel-core-xml-2.17.0.redhat-630187.jar"/>
+  <path value="C:/Users/gimel/.m2/repository/log4j/log4j/1.2.17.redhat-1/log4j-1.2.17.redhat-1.jar"/>
+  <path value="C:/Users/gimel/.m2/repository/org/apache/camel/camel-blueprint/2.17.0.redhat-630187/camel-blueprint-2.17.0.redhat-630187.jar"/>
+  <path value="C:/Users/gimel/.m2/repository/net/sf/jt400/jt400/8.7/jt400-8.7.jar"/>
+  <path value="C:/Users/gimel/.m2/repository/org/slf4j/slf4j-log4j12/1.7.7.redhat-2/slf4j-log4j12-1.7.7.redhat-2.jar"/>
+  <path value="C:/Users/gimel/.m2/repository/org/apache/camel/camel-jt400/2.17.0.redhat-630187/camel-jt400-2.17.0.redhat-630187.jar"/>
+  <path value="C:/Users/gimel/.m2/repository/com/sun/xml/bind/jaxb-core/2.2.11/jaxb-core-2.2.11.jar"/>
+  <path value="C:/Users/gimel/.m2/repository/org/slf4j/slf4j-api/1.7.7.redhat-2/slf4j-api-1.7.7.redhat-2.jar"/>
+  <path value="C:/Users/gimel/.m2/repository/org/apache/camel/camel-core-osgi/2.17.0.redhat-630187/camel-core-osgi-2.17.0.redhat-630187.jar"/>
+ </paths>
+ <validation>
+  <el>
+   <linked-el length="30" name="%0" offset="1319" path="%1"/>
+   <linked-el length="16" name="%2" offset="2132" path="%1"/>
+   <linked-el length="21" name="%3" offset="1465" path="%1"/>
+   <linked-el length="21" name="%3" offset="1529" path="%1"/>
+   <linked-el length="21" name="%4" offset="1465" path="%1"/>
+   <linked-el length="21" name="%4" offset="1529" path="%1"/>
+   <linked-el length="70" name="%5" offset="935" path="%6"/>
+   <linked-el length="30" name="%7" offset="1319" path="%1"/>
+   <linked-el length="70" name="%8" offset="935" path="%6"/>
+   <linked-el length="30" name="%9" offset="1319" path="%1"/>
+   <linked-el length="30" name="%10" offset="1319" path="%1"/>
+   <linked-el length="16" name="%11" offset="2132" path="%1"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="plugin" value="%0"/>
+  <alias path="/account-service/pom.xml" value="%1"/>
+  <alias
+   path="/account-service/src/main/resources/OSGI-INF/blueprint/blueprint.xml" value="%6"/>
+  <alias path="camel" value="%2"/>
+  <alias path="project.artifactId" value="%3"/>
+  <alias path="project" value="%4"/>
+  <alias path="header" value="%5"/>
+  <alias path="version.maven" value="%7"/>
+  <alias path="header.operationName" value="%8"/>
+  <alias path="version" value="%9"/>
+  <alias path="bundle" value="%10"/>
+  <alias path="camel.version" value="%11"/>
+ </aliases>
+ <includes/>
+ <uris/>
+</kb-project>

@@ -1,0 +1,67 @@
+package com.bankmega;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.nio.charset.Charset;
+
+public class InquirySocket implements Runnable{
+
+	public static final int PORT = 5000;
+	public static final String RESPONSE = "000001CD5CE2D6D2C5C4D8C9C3D9E3E3C5D340F1F04BF1F14BF3F34BF8F540404040F0F0F1F3F7C9D7D9E3D2D7D6404040000000007FF1F1F1F2F5F5E3F9F9F9F9404040404040404040383FC4C1DAF1E2001FC9C4D940C8F0F0F2F0F6F6C8C1D6D3D5C540C1D6D3D5C5E7C5E34040404040D5E3F00000010010020101191F1F1FF0F9F5F0F0F6F2F1F0F1F6F5F0F3F0F1404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040D1D340E2C1D4D9C1E3E4D3C1D5C7C940D5D640F3F940404040404040404040404040404040404040D9E340F0F0F240D9E640F0F0F340C7D6D5C4C1D5C7C4C9C140404040404040404040404040404040D4C5D5E3C5D5C7404040404040404040404040404040404040404040404040404040404040404040D1C1D2C1D9E3C140D7E4E2C1E340F1F0F3F5F0404040404040404040404040404040404040404040C8C1D6D3D5C540C1D6D3D5C5E7C5E34040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040001011965FD2E340404040404040404040404040404040404040";
+	
+	private Socket socket;
+	private String name;
+	
+	public InquirySocket(Socket socket, String name) {
+		this.socket = socket;
+		this.name = name;
+	}
+	
+	public static byte[] hexStringToByteArray(String s) {
+	    int len = s.length();
+	    byte[] data = new byte[len / 2];
+	    for (int i = 0; i < len; i += 2) {
+	        data[i / 2] = (byte) ((Character.digit(s.charAt(i), 16) << 4)
+	                             + Character.digit(s.charAt(i+1), 16));
+	    }
+	    return data;
+	}
+
+	public static void main(String[] args) throws IOException {
+		ServerSocket serverSocket = new ServerSocket(PORT);
+		int index = 0;
+		boolean run = true;
+		
+		while (run) {
+			Socket socket = serverSocket.accept();
+			new Thread(new InquirySocket(socket, "#" + index++)).start();
+		}
+		
+		serverSocket.close();
+	}
+	
+	@Override
+	public void run() {
+		try {
+			System.out.println("Serving client " + name + " ...");
+			DataOutputStream dout = new DataOutputStream(socket.getOutputStream());
+			DataInputStream din = new DataInputStream(socket.getInputStream());
+			
+			int length = din.readInt();
+			if (length > 0) {
+				byte[] resbyte = new byte[length];
+				din.readFully(resbyte);
+				System.out.println("Request " + name + ": " + new String(resbyte, Charset.forName("IBM285")));
+			}
+			
+			byte[] byteinput = hexStringToByteArray(RESPONSE);
+			dout.write(byteinput);
+			dout.flush();
+            
+			socket.close();
+		} catch (IOException e) {}
+	}
+}
