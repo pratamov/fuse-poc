@@ -1819,3 +1819,203 @@ java.lang.NullPointerException
 
 !ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 04:26:27.439
 !MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:04:36.454
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+!SESSION 2018-02-21 05:20:24.120 -----------------------------------------------
+eclipse.buildId=11.1.0.GA-v20171026-1022-B1486
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.jboss.devstudio.core.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.jboss.devstudio.core.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-02-21 05:20:32.967
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:22:10.773
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.eclipse.egit.core 4 0 2018-02-21 05:24:13.278
+!MESSAGE Remove repository mapping of Git mapped resource for which project or mapped git repository has disappeared: 'RepositoryMapping[<empty> -> '.git', absolute path: 'D:/workspace_bankmega_poc/account/.git' ]'
+!STACK 0
+java.io.FileNotFoundException: 
+	at org.eclipse.egit.core.project.GitProjectData.logAndUnmapGoneMappedResource(GitProjectData.java:720)
+	at org.eclipse.egit.core.project.GitProjectData.map(GitProjectData.java:683)
+	at org.eclipse.egit.core.project.GitProjectData.remapAll(GitProjectData.java:647)
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:630)
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:218)
+	at org.eclipse.egit.core.GitProvider.getData(GitProvider.java:106)
+	at org.eclipse.egit.core.project.RepositoryMapping.getProjectData(RepositoryMapping.java:361)
+	at org.eclipse.egit.core.project.RepositoryMapping.findMapping(RepositoryMapping.java:377)
+	at org.eclipse.egit.core.project.RepositoryMapping.getMapping(RepositoryMapping.java:317)
+	at org.eclipse.egit.core.Activator$IgnoreDerivedResources$1.visit(Activator.java:710)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:64)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.eclipse.egit.core.Activator$IgnoreDerivedResources.resourceChanged(Activator.java:694)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.egit.core 4 0 2018-02-21 05:24:14.906
+!MESSAGE Remove repository mapping of Git mapped resource for which project or mapped git repository has disappeared: 'RepositoryMapping[<empty> -> '../.git', absolute path: 'D:/workspace_bankmega_poc/account/.git' ]'
+!STACK 0
+java.io.FileNotFoundException: 
+	at org.eclipse.egit.core.project.GitProjectData.logAndUnmapGoneMappedResource(GitProjectData.java:720)
+	at org.eclipse.egit.core.project.GitProjectData.map(GitProjectData.java:683)
+	at org.eclipse.egit.core.project.GitProjectData.remapAll(GitProjectData.java:647)
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:630)
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:218)
+	at org.eclipse.egit.core.GitProvider.getData(GitProvider.java:106)
+	at org.eclipse.egit.core.project.RepositoryMapping.getProjectData(RepositoryMapping.java:361)
+	at org.eclipse.egit.core.project.RepositoryMapping.findMapping(RepositoryMapping.java:377)
+	at org.eclipse.egit.core.project.RepositoryMapping.getMapping(RepositoryMapping.java:317)
+	at org.eclipse.egit.core.Activator$IgnoreDerivedResources$1.visit(Activator.java:710)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:64)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.eclipse.egit.core.Activator$IgnoreDerivedResources.resourceChanged(Activator.java:694)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-21 05:24:28.286
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\gimel'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2018-02-21 05:37:57.935
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:38:35.088
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:38:45.634
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:39:47.260
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:39:47.265
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:40:05.175
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:40:05.239
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:40:05.296
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:40:05.831
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:40:39.088
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:41:26.655
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:41:34.687
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:42:00.404
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:43:59.233
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:44:07.499
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:44:07.559
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:44:07.640
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:44:08.027
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:44:56.925
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:45:26.457
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:46:53.569
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:47:04.444
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:51:46.736
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:58:14.529
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 05:58:15.881
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-21 06:02:24.233
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-21 06:02:24.239
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-21 06:02:24.333
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-21 06:02:24.341
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 06:05:00.748
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 06:05:11.403
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 06:05:24.560
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 06:05:31.486
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 06:13:29.915
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 06:13:37.854
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 06:19:27.421
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-21 06:22:06.464
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-21 06:22:06.470
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 06:28:41.351
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 06:29:04.047
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext
+
+!ENTRY org.fusesource.ide.camel.model.service.core 2 0 2018-02-21 06:29:06.470
+!MESSAGE ParseAttributes: Unsupported EIP will be ignored: camelContext

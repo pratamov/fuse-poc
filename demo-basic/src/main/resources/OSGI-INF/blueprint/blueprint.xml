@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 https://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd                            http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
+    <bean class="com.mysql.jdbc.jdbc2.optional.MysqlDataSource"
+        id="mysqlDS" scope="singleton">
+        <property name="url" value="jdbc:mysql://localhost/bankmega_poc"/>
+        <property name="user" value="root"/>
+    </bean>
+    <camelContext id="demo-basic" xmlns="http://camel.apache.org/schema/blueprint">
+        <route id="_route1">
+            <from id="_from1" uri="restlet:http://localhost:6001/api/item"/>
+            <to id="_to2" uri="log:logger?showHeaders=true"/>
+            <setBody id="_setBody1">
+                <simple>INSERT INTO `item` (`data`) VALUES ('asd')</simple>
+            </setBody>
+            <to id="_to3" uri="log:logger"/>
+            <to id="_to1" uri="jdbc:mysqlDS"/>
+        </route>
+    </camelContext>
+</blueprint>

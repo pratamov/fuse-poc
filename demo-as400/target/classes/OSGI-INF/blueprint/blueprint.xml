@@ -6,20 +6,18 @@
     <bean class="org.bankmega.codec.IBM285Decoder" id="iBM285Decoder" scope="singleton"/>
     <bean class="com.bankmega.processor.InquiryRequestProcessor"
         id="inquiryRequestProcessor" scope="singleton"/>
-    <camelContext id="cbr-example-context" xmlns="http://camel.apache.org/schema/blueprint">
+    <camelContext id="demo-as400" xmlns="http://camel.apache.org/schema/blueprint">
         <route id="_route1">
             <from id="_from1" uri="restlet:http://localhost:7890/inquiry"/>
+            <setHeader headerName="Content-Type" id="_setHeader1">
+                <constant>application/json</constant>
+            </setHeader>
             <process id="_process1" ref="inquiryRequestProcessor"/>
-            <log id="_log1" message="Request: ${body}"/>
             <to id="_to1" uri="netty4:tcp://localhost:8074?decoders=#iBM285Decoder&amp;disconnect=true&amp;tcpNoDelay=false&amp;useByteBuf=true"/>
-            <log id="_log2" message="Response: ${body}"/>
             <process id="_process2" ref="inquiryResponseProcessor"/>
             <marshal id="_marshal1">
                 <json library="Jackson"/>
             </marshal>
-            <setHeader headerName="Content-Type" id="_setHeader1">
-                <constant>application/json</constant>
-            </setHeader>
         </route>
     </camelContext>
 </blueprint>

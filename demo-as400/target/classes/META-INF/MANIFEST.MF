@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1519159929205
+Bnd-LastModified: 1519169190569
 Build-Jdk: 1.8.0_144
 Built-By: gimel
 Bundle-Blueprint: OSGI-INF/blueprint/blueprint.xml
